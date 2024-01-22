@@ -1,0 +1,97 @@
+.headPage {
+    margin: 20px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+  }
+  
+  .headPage h1 {
+    width: 90%;
+    font-size: 24px;
+    color: #55828b;
+  }
+  
+  .headPage img {
+    margin: 20px;
+    width: 100%; /* Alterado para preencher a largura do contêiner */
+    max-width: 600px; /* Largura máxima da imagem */
+    border-radius: 12px;
+    object-fit: cover;
+    background-color: rgb(239, 205, 255);
+    overflow: hidden;
+    position: static;
+  }
+  
+  .headPage::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 2px;
+    background-color: #55828b59;
+  }
+  
+  .pageText{
+    margin: 20px;
+    padding: 12px;
+  }
+
+  .pageText p{
+    margin-top: 12px;
+  }
+
+  .imagesProd{
+    display: flex;
+  }
+
+  aside{
+    width: 100px;
+  }
+  /* Media query para telas menores, como tablets e celulares */
+  @media screen and (max-width: 768px) {
+    .headPage {
+      margin: 10px;
+      padding: 8px;
+    }
+  
+    .headPage h1 {
+      font-size: 20px;
+    }
+  
+    .headPage img {
+      margin: 10px;
+      width: 100%;
+      max-width: 400px; /* Reduz a largura máxima da imagem para telas menores */
+    }
+  
+    .headPage::after {
+      width: 80%;
+    }
+  
+    .pageText {
+      margin: 10px;
+      padding: 8px;
+    }
+  
+    .pageText h2 {
+      font-size: 18px;
+    }
+  
+    .pageText p {
+      margin-top: 8px;
+      font-size: 12px;
+    }
+
+    aside {
+        width: 100%; /* Ajusta a largura para ocupar toda a largura disponível */
+        max-width: 80px; /* Define uma largura máxima para o aside */
+        margin-top: 10px; /* Adiciona margem superior para separação */
+      }
+  }
+  
